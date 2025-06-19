@@ -2,9 +2,13 @@ package UmaSirHomeTask;
 
 public class ReverseStr {
     public static void reverseMe2(String str){
-        int i=0;int j=str.length()-1;
-        while (i<=j){
+       char[]arr=str.toCharArray();
+       StringBuilder sb = new StringBuilder();
+        for (int i = arr.length-1; i >= 0; i--) {
+            sb = sb.append(arr[i]);
         }
+        System.out.println(sb);
+
     }
     public static StringBuilder reverse(String str){
         StringBuilder sb=new StringBuilder("");
@@ -17,5 +21,6 @@ public class ReverseStr {
         // reverse String without existing method.
         String str="ankit sir uma sir";
         System.out.println(reverse(str));
+        reverseMe2("abcde");
     }
 }
